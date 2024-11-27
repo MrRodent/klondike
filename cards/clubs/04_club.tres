@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Card" load_steps=3 format=3 uid="uid://dlifgaks65vnh"]
+
+[ext_resource type="Texture2D" uid="uid://eds07rwbaet7" path="res://assets/card_art/card_clubs_04.png" id="1_2fwr3"]
+[ext_resource type="Script" path="res://custom_resources/card.gd" id="1_ksy13"]
+
+[resource]
+script = ExtResource("1_ksy13")
+id = "04_club"
+art = ExtResource("1_2fwr3")
+number = 3
+suit = 3
+colour = 0

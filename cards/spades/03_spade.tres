@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Card" load_steps=3 format=3 uid="uid://kdtt8jdjgkdm"]
+
+[ext_resource type="Script" path="res://custom_resources/card.gd" id="1_iey3f"]
+[ext_resource type="Texture2D" uid="uid://d23ky4dj162ep" path="res://assets/card_art/card_spades_03.png" id="1_scwqt"]
+
+[resource]
+script = ExtResource("1_iey3f")
+id = "03_spade"
+art = ExtResource("1_scwqt")
+number = 2
+suit = 0
+colour = 0

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Card" load_steps=3 format=3 uid="uid://d2u6em3gtlgqh"]
+
+[ext_resource type="Script" path="res://custom_resources/card.gd" id="1_bu3aj"]
+[ext_resource type="Texture2D" uid="uid://cud0n5l5dcaul" path="res://assets/card_art/card_hearts_02.png" id="1_vcc6o"]
+
+[resource]
+script = ExtResource("1_bu3aj")
+id = "02_heart"
+art = ExtResource("1_vcc6o")
+number = 1
+suit = 1
+colour = 1

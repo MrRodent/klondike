@@ -1,0 +1,115 @@
+[gd_scene load_steps=9 format=3 uid="uid://4jscgi38qqk6"]
+
+[ext_resource type="PackedScene" uid="uid://cfs45fq831yvf" path="res://scenes/card_ui/card_ui.tscn" id="1_ab4u4"]
+[ext_resource type="Texture2D" uid="uid://cslwx33xx0kjh" path="res://assets/background.png" id="1_ahwjl"]
+[ext_resource type="PackedScene" uid="uid://bc51gli78nyqy" path="res://scenes/drop_point.tscn" id="2_i7yai"]
+[ext_resource type="Resource" uid="uid://pmtfy6lm20ft" path="res://cards/hearts/01_heart.tres" id="4_ivl3f"]
+[ext_resource type="Resource" uid="uid://64cgba5h40jb" path="res://cards/diamonds/03_diamond.tres" id="5_jw3ve"]
+[ext_resource type="Resource" uid="uid://c020jfib46dfn" path="res://cards/hearts/05_heart.tres" id="6_nk8im"]
+[ext_resource type="Resource" uid="uid://bktymksw1hvkm" path="res://cards/clubs/02_club.tres" id="7_orwy5"]
+[ext_resource type="Resource" uid="uid://db4jssmeu5cso" path="res://cards/spades/04_spade.tres" id="8_u5foe"]
+
+[node name="Game" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(240, 180)
+texture = ExtResource("1_ahwjl")
+metadata/_edit_lock_ = true
+
+[node name="Stock" type="CanvasLayer" parent="."]
+
+[node name="Waste" type="CanvasLayer" parent="."]
+
+[node name="Foundation" type="CanvasLayer" parent="."]
+
+[node name="Tableau" type="CanvasLayer" parent="." groups=["ui_layer"]]
+
+[node name="Column1" type="VBoxContainer" parent="Tableau"]
+offset_left = 384.0
+offset_top = 106.0
+offset_right = 426.0
+offset_bottom = 360.0
+theme_override_constants/separation = -45
+
+[node name="DropPoint" parent="Tableau/Column1" instance=ExtResource("2_i7yai")]
+position = Vector2(21, 30)
+
+[node name="CardUI" parent="Tableau/Column1" instance=ExtResource("1_ab4u4")]
+layout_mode = 2
+card = ExtResource("4_ivl3f")
+
+[node name="CardUI2" parent="Tableau/Column1" instance=ExtResource("1_ab4u4")]
+layout_mode = 2
+card = ExtResource("5_jw3ve")
+
+[node name="CardUI3" parent="Tableau/Column1" instance=ExtResource("1_ab4u4")]
+layout_mode = 2
+card = ExtResource("6_nk8im")
+
+[node name="Column2" type="VBoxContainer" parent="Tableau"]
+offset_left = 329.0
+offset_top = 106.0
+offset_right = 371.0
+offset_bottom = 360.0
+theme_override_constants/separation = -45
+
+[node name="DropPoint" parent="Tableau/Column2" instance=ExtResource("2_i7yai")]
+position = Vector2(21, 30)
+
+[node name="CardUI4" parent="Tableau/Column2" instance=ExtResource("1_ab4u4")]
+layout_mode = 2
+card = ExtResource("7_orwy5")
+
+[node name="CardUI5" parent="Tableau/Column2" instance=ExtResource("1_ab4u4")]
+layout_mode = 2
+card = ExtResource("8_u5foe")
+
+[node name="Column3" type="VBoxContainer" parent="Tableau"]
+offset_left = 274.0
+offset_top = 106.0
+offset_right = 316.0
+offset_bottom = 360.0
+theme_override_constants/separation = -45
+
+[node name="DropPoint" parent="Tableau/Column3" instance=ExtResource("2_i7yai")]
+position = Vector2(21, 30)
+
+[node name="Column4" type="VBoxContainer" parent="Tableau"]
+offset_left = 219.0
+offset_top = 106.0
+offset_right = 261.0
+offset_bottom = 360.0
+theme_override_constants/separation = -45
+
+[node name="DropPoint" parent="Tableau/Column4" instance=ExtResource("2_i7yai")]
+position = Vector2(21, 30)
+
+[node name="Column5" type="VBoxContainer" parent="Tableau"]
+offset_left = 164.0
+offset_top = 106.0
+offset_right = 206.0
+offset_bottom = 360.0
+theme_override_constants/separation = -45
+
+[node name="DropPoint" parent="Tableau/Column5" instance=ExtResource("2_i7yai")]
+position = Vector2(21, 30)
+
+[node name="Column6" type="VBoxContainer" parent="Tableau"]
+offset_left = 109.0
+offset_top = 106.0
+offset_right = 151.0
+offset_bottom = 360.0
+theme_override_constants/separation = -45
+
+[node name="DropPoint" parent="Tableau/Column6" instance=ExtResource("2_i7yai")]
+position = Vector2(21, 30)
+
+[node name="Column7" type="VBoxContainer" parent="Tableau"]
+offset_left = 54.0
+offset_top = 106.0
+offset_right = 96.0
+offset_bottom = 360.0
+theme_override_constants/separation = -45
+
+[node name="DropPoint" parent="Tableau/Column7" instance=ExtResource("2_i7yai")]
+position = Vector2(21, 30)

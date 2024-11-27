@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://by40tubws6quc"]
+
+[ext_resource type="Script" path="res://custom_resources/card.gd" id="1_rj658"]
+
+[resource]
+script = ExtResource("1_rj658")
+id = "01_club"
+number = 0
+suit = 3
+colour = 0

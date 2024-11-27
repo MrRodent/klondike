@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Card" load_steps=3 format=3 uid="uid://c7x61t5yc2b2d"]
+
+[ext_resource type="Script" path="res://custom_resources/card.gd" id="1_pm88d"]
+[ext_resource type="Texture2D" uid="uid://j6opbfo7mm25" path="res://assets/card_art/card_clubs_05.png" id="1_riueo"]
+
+[resource]
+script = ExtResource("1_pm88d")
+id = "05_club"
+art = ExtResource("1_riueo")
+number = 4
+suit = 3
+colour = 0

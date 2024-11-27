@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Card" load_steps=3 format=3 uid="uid://3bbnw8b4hlcq"]
+
+[ext_resource type="Script" path="res://custom_resources/card.gd" id="1_s16nk"]
+[ext_resource type="Texture2D" uid="uid://e702r8qph0a" path="res://assets/card_art/card_diamonds_04.png" id="1_tl636"]
+
+[resource]
+script = ExtResource("1_s16nk")
+id = "04_diamond"
+art = ExtResource("1_tl636")
+number = 3
+suit = 2
+colour = 1
