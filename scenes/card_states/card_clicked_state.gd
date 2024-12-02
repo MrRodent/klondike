@@ -8,8 +8,9 @@ func enter() -> void:
 	# Nyt kun tapahtuu, halutaan monitorointi päälle
 	card_ui.drop_point_detector.monitoring = true
 	
-	if card_ui.card:
-		print('clicked ', card_ui.card.id, ' colour: ', card_ui.card.colour)
+	card_ui.texture.modulate = Color(0.92, 0.92, 0.92, 0.98)
+	#if card_ui.card:
+		#print('clicked ', card_ui.card.id, ' colour: ', card_ui.card.colour)
 
 func on_input(event: InputEvent) -> void:
 	#if card_ui.is_hidden and event.is_action_released("left_mouse"):

@@ -9,6 +9,8 @@ func enter() -> void:
 	
 	is_played = false
 	
+	card_ui.texture.modulate = Color.WHITE
+	
 	# Kortin pelaaminen
 	if not card_ui.targets.is_empty():
 		# TODO: pura tää kamala getget-hökötys
