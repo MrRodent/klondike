@@ -4,7 +4,7 @@ extends Node
 
 enum State {BASE, HIDDEN, CLICKED, DRAGGING, RELEASED}
 
-signal  transition_requested(from: CardState, to: State)
+signal transition_requested(from: CardState, to: State)
 
 @export var state: State
 
