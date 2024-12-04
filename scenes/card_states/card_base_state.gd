@@ -15,7 +15,7 @@ func enter() -> void:
 	
 	# NOTE: staten debugaukseen
 	card_ui.color.color = Color.WEB_GREEN
-	card_ui.color.size = Vector2(38, 16)
+	#card_ui.color.size = Vector2(38, 16)
 	card_ui.color.position = Vector2(2, 22)
 	card_ui.state.text = "BASE"
 
@@ -23,34 +23,42 @@ func enter() -> void:
 func on_gui_input(event: InputEvent) -> void:
 	# Varmistaa onko korttia/kolumnia laillista liikuttaa
 	if event.is_action_pressed("left_mouse"):
-		#TODO: pitää pystyä liikuttamaan jos laillinen kolumni
-		if not card_ui.is_last_sibling():
-			return
-		else:
+		#TODO: siivoa kun ei debug
+		#if not card_ui.is_last_sibling():
+			#return
+			#pass
+		#else:
 			card_ui.pivot_offset = card_ui.get_global_mouse_position() - card_ui.global_position
 			transition_requested.emit(self, CardState.State.CLICKED)
-			#create_card_column(card_ui)
+			# TODO: tämä tapahtumaan paremmassa paikassa?
+			create_card_column(card_ui)
 
 
 func create_card_column(clicked_card: CardUI) -> void:
+	var array = clicked_card.get_parent().get_children()
+	var index = array.find(clicked_card)
+	var cards_in_array = array.size() - 1
+	#print("skidit: ", array)
+	#print("clicked_card index: ", index, " cards in array: ", cards_in_array)
+	if index == cards_in_array:
+		print("no cards on top")
+		return
+	
 	# Create a new VBoxContainer instance
 	var vbox = VBoxContainer.new()
 	# Set the theme constants for the VBoxContainer
 	vbox.add_theme_constant_override("separation", -45)
 	vbox.set_position(Vector2(0, 15))
+	
+	for i in range(cards_in_array - index):
+		# Get the next card in the array
+		var next_card = array[index + i + 1]
+		# Reparent the card to the VBoxContainer
+		next_card.reparent(vbox)
+		# Set the new parent of the card
+		next_card.current_parent = vbox
+	
 	# Add the VBoxContainer to the scene tree
-	add_child(vbox)
-	
-	# Reparent the cards below to this vbox
-
-	# print("vbox: ", vbox)
-	# print("current parent: ", card_ui.current_parent)
-	# print("clicked card: ", clicked_card)
-	# print("vbox children: ", vbox.get_children())
-
-	
-	# loop jos kaikki childit laillisia
-	# -> lailliset arrayhyn
-	# -> luo VBoxContainer
-	# -> lapseta kaikki
-	# -> saa liikuttaa
+	clicked_card.add_child(vbox)
+	clicked_card.child_column = vbox
+	#print("current kids: ", clicked_card.get_children())

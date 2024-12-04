@@ -5,10 +5,11 @@ func enter() -> void:
 	# NOTE: staten debugaukseen
 	card_ui.color.color = Color.ORANGE
 	card_ui.state.text = "CLICKED"
-	# Nyt kun tapahtuu, halutaan monitorointi päälle
-	card_ui.drop_point_detector.monitoring = true
 	
+	# Varmistetaan että monitorointi päällä
+	card_ui.drop_point_detector.monitoring = true
 	card_ui.texture.modulate = Color(0.92, 0.92, 0.92, 0.98)
+	
 	#if card_ui.card:
 		#print('clicked ', card_ui.card.id, ' colour: ', card_ui.card.colour)
 

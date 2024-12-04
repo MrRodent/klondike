@@ -13,7 +13,8 @@ signal reparent_requested(which_card_ui: CardUI)
 @onready var card_state_machine = $CardStateMachine
 @onready var targets: Array[Node] = []
 @onready var current_parent: BoxContainer
-@onready var is_hidden = true
+@onready var is_hidden: bool = true
+@onready var child_column: VBoxContainer
 
 
 func _ready() -> void:

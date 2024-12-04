@@ -7,7 +7,7 @@ func enter() -> void:
 	
 	# NOTE: staten debugaukseen
 	card_ui.color.color = Color.WEB_MAROON
-	card_ui.color.size = Vector2(38, 56)
+	#card_ui.color.size = Vector2(38, 56)
 	card_ui.color.position = Vector2(2, 2)
 	card_ui.state.text = "HIDDEN"
 	card_ui.pivot_offset = Vector2.ZERO

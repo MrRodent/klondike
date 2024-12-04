@@ -64,6 +64,7 @@ vertical_alignment = 1
 uppercase = true
 
 [node name="DropPointDetector" type="Area2D" parent="."]
+monitoring = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DropPointDetector"]
 position = Vector2(21, 30)

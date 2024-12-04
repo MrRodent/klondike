@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://4jscgi38qqk6"]
+[gd_scene load_steps=9 format=3 uid="uid://4jscgi38qqk6"]
 
 [ext_resource type="PackedScene" uid="uid://cfs45fq831yvf" path="res://scenes/card_ui/card_ui.tscn" id="1_ab4u4"]
 [ext_resource type="Texture2D" uid="uid://cslwx33xx0kjh" path="res://assets/background.png" id="1_ahwjl"]
@@ -8,7 +8,6 @@
 [ext_resource type="Resource" uid="uid://c020jfib46dfn" path="res://cards/hearts/05_heart.tres" id="6_nk8im"]
 [ext_resource type="Resource" uid="uid://bktymksw1hvkm" path="res://cards/clubs/02_club.tres" id="7_orwy5"]
 [ext_resource type="Resource" uid="uid://db4jssmeu5cso" path="res://cards/spades/04_spade.tres" id="8_u5foe"]
-[ext_resource type="Resource" uid="uid://c7e7au0ysw4i8" path="res://cards/hearts/03_heart.tres" id="9_5m2cg"]
 
 [node name="Game" type="Node2D"]
 
@@ -39,10 +38,6 @@ position = Vector2(21, 30)
 layout_mode = 2
 card = ExtResource("4_ivl3f")
 
-[node name="CardUI4" parent="Tableau/Column1" instance=ExtResource("1_ab4u4")]
-layout_mode = 2
-card = ExtResource("4_ivl3f")
-
 [node name="CardUI2" parent="Tableau/Column1" instance=ExtResource("1_ab4u4")]
 layout_mode = 2
 card = ExtResource("5_jw3ve")
@@ -58,7 +53,7 @@ offset_right = 371.0
 offset_bottom = 360.0
 theme_override_constants/separation = -45
 
-[node name="DropPoint" parent="Tableau/Column2" instance=ExtResource("2_i7yai")]
+[node name="DropPoint2" parent="Tableau/Column2" instance=ExtResource("2_i7yai")]
 position = Vector2(21, 30)
 
 [node name="CardUI4" parent="Tableau/Column2" instance=ExtResource("1_ab4u4")]
@@ -69,16 +64,6 @@ card = ExtResource("7_orwy5")
 layout_mode = 2
 card = ExtResource("8_u5foe")
 
-[node name="TEST" type="VBoxContainer" parent="Tableau/Column2/CardUI5"]
-offset_top = 15.0
-offset_right = 42.0
-offset_bottom = 269.0
-theme_override_constants/separation = -45
-
-[node name="CardUI5" parent="Tableau/Column2/CardUI5/TEST" instance=ExtResource("1_ab4u4")]
-layout_mode = 2
-card = ExtResource("9_5m2cg")
-
 [node name="Column3" type="VBoxContainer" parent="Tableau"]
 offset_left = 274.0
 offset_top = 106.0
@@ -86,7 +71,7 @@ offset_right = 316.0
 offset_bottom = 360.0
 theme_override_constants/separation = -45
 
-[node name="DropPoint" parent="Tableau/Column3" instance=ExtResource("2_i7yai")]
+[node name="DropPoint3" parent="Tableau/Column3" instance=ExtResource("2_i7yai")]
 position = Vector2(21, 30)
 
 [node name="CardUI6" parent="Tableau/Column3" instance=ExtResource("1_ab4u4")]
@@ -100,7 +85,7 @@ offset_right = 261.0
 offset_bottom = 360.0
 theme_override_constants/separation = -45
 
-[node name="DropPoint" parent="Tableau/Column4" instance=ExtResource("2_i7yai")]
+[node name="DropPoint4" parent="Tableau/Column4" instance=ExtResource("2_i7yai")]
 position = Vector2(21, 30)
 
 [node name="Column5" type="VBoxContainer" parent="Tableau"]
@@ -110,7 +95,7 @@ offset_right = 206.0
 offset_bottom = 360.0
 theme_override_constants/separation = -45
 
-[node name="DropPoint" parent="Tableau/Column5" instance=ExtResource("2_i7yai")]
+[node name="DropPoint5" parent="Tableau/Column5" instance=ExtResource("2_i7yai")]
 position = Vector2(21, 30)
 
 [node name="Column6" type="VBoxContainer" parent="Tableau"]
@@ -120,7 +105,7 @@ offset_right = 151.0
 offset_bottom = 360.0
 theme_override_constants/separation = -45
 
-[node name="DropPoint" parent="Tableau/Column6" instance=ExtResource("2_i7yai")]
+[node name="DropPoint6" parent="Tableau/Column6" instance=ExtResource("2_i7yai")]
 position = Vector2(21, 30)
 
 [node name="Column7" type="VBoxContainer" parent="Tableau"]
@@ -130,5 +115,5 @@ offset_right = 96.0
 offset_bottom = 360.0
 theme_override_constants/separation = -45
 
-[node name="DropPoint" parent="Tableau/Column7" instance=ExtResource("2_i7yai")]
+[node name="DropPoint7" parent="Tableau/Column7" instance=ExtResource("2_i7yai")]
 position = Vector2(21, 30)

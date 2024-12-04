@@ -7,14 +7,16 @@ func enter() -> void:
 	card_ui.color.color = Color.DARK_VIOLET
 	card_ui.state.text = "RELEASED"
 	
+	
 	is_played = false
 	
 	card_ui.texture.modulate = Color.WHITE
 	
 	# Kortin pelaaminen
 	if not card_ui.targets.is_empty():
-		# TODO: pura tää kamala getget-hökötys
-		var last_item_in_column = card_ui.targets[0].get_parent().get_parent().get_child(-1)
+		# TODO: tähän jos saisi paremman pätkän kuin tämän get_parent ketjutuksen.
+		# targets[-1] ottaa arrayn viimeisen
+		var last_item_in_column = card_ui.targets[-1].get_parent().get_parent().get_child(-1)
 		#print("last item in column: ", last_item_in_column, " class: ", last_item_in_column.get_class())
 		
 		if last_item_in_column.get_class() == "Control": # TODO: tähän joku luotettavampi check
@@ -37,7 +39,7 @@ func enter() -> void:
 		
 		#print("play card for target(s)", card_ui.targets)
 		#TODO: pura tämäkin hökötys
-		var new_parent = card_ui.targets[0].get_parent().get_parent()
+		var new_parent = card_ui.targets[-1].get_parent().get_parent()
 		card_ui.reparent(new_parent)
 		card_ui.current_parent = new_parent
 		#print("NEW PARENT: ", new_parent)
