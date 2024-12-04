@@ -7,9 +7,9 @@ func enter() -> void:
 	card_ui.color.color = Color.DARK_VIOLET
 	card_ui.state.text = "RELEASED"
 	
-	
 	is_played = false
 	
+	# Turns colour back to normal
 	card_ui.texture.modulate = Color.WHITE
 	
 	# Kortin pelaaminen
@@ -43,6 +43,9 @@ func enter() -> void:
 		card_ui.reparent(new_parent)
 		card_ui.current_parent = new_parent
 		#print("NEW PARENT: ", new_parent)
+		
+		if card_ui.child_column:
+			print("this card has the following children: ", card_ui.child_column.get_children())
 
 
 func on_input(_event: InputEvent) -> void:

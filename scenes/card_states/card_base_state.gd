@@ -41,18 +41,20 @@ func create_card_column(clicked_card: CardUI) -> void:
 	#print("skidit: ", array)
 	#print("clicked_card index: ", index, " cards in array: ", cards_in_array)
 	if index == cards_in_array:
-		print("no cards on top")
+		print("no cards on top of ", clicked_card.card.id)
 		return
 	
 	# Create a new VBoxContainer instance
 	var vbox = VBoxContainer.new()
 	# Set the theme constants for the VBoxContainer
-	vbox.add_theme_constant_override("separation", -45)
-	vbox.set_position(Vector2(0, 15))
+	# defaults: separation -45, position (0, 15)
+	vbox.add_theme_constant_override("separation", -50)
+	vbox.set_position(Vector2(0, 10))
 	
 	for i in range(cards_in_array - index):
 		# Get the next card in the array
 		var next_card = array[index + i + 1]
+		print("card ", i, " on top: ", next_card.card.id)
 		# Reparent the card to the VBoxContainer
 		next_card.reparent(vbox)
 		# Set the new parent of the card
