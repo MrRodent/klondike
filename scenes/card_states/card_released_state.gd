@@ -45,7 +45,10 @@ func enter() -> void:
 		#print("NEW PARENT: ", new_parent)
 		
 		if card_ui.child_column:
-			print("this card has the following children: ", card_ui.child_column.get_children())
+			for child in card_ui.child_column.get_children():
+				child.reparent(new_parent)
+				child.texture.modulate = Color.WHITE
+			#print("this card has the following children: ", card_ui.child_column.get_children())
 
 
 func on_input(_event: InputEvent) -> void:

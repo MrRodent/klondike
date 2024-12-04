@@ -48,8 +48,8 @@ func create_card_column(clicked_card: CardUI) -> void:
 	var vbox = VBoxContainer.new()
 	# Set the theme constants for the VBoxContainer
 	# defaults: separation -45, position (0, 15)
-	vbox.add_theme_constant_override("separation", -50)
-	vbox.set_position(Vector2(0, 10))
+	vbox.add_theme_constant_override("separation", -45)
+	vbox.set_position(Vector2(0, 15))
 	
 	for i in range(cards_in_array - index):
 		# Get the next card in the array
@@ -57,6 +57,7 @@ func create_card_column(clicked_card: CardUI) -> void:
 		print("card ", i, " on top: ", next_card.card.id)
 		# Reparent the card to the VBoxContainer
 		next_card.reparent(vbox)
+		#next_card.texture.modulate = Color(1, 1, 1, 0.7)
 		# Set the new parent of the card
 		next_card.current_parent = vbox
 	

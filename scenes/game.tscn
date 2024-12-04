@@ -117,3 +117,12 @@ theme_override_constants/separation = -45
 
 [node name="DropPoint7" parent="Tableau/Column7" instance=ExtResource("2_i7yai")]
 position = Vector2(21, 30)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 8.0
+offset_top = 219.0
+offset_right = 476.0
+offset_bottom = 354.0
+size_flags_horizontal = 3
+text = "- virhe välillä kun laittaa saman (värisen?) kortin päälle, target ongelma?
+- välillä kortit katoilee kolumneissa toistensa alle (kun koittanut tehdä invalid moven)"
