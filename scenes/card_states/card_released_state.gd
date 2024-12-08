@@ -19,23 +19,21 @@ func enter() -> void:
 		var last_item_in_column = card_ui.targets[-1].get_parent().get_parent().get_child(-1)
 		#print("last item in column: ", last_item_in_column, " class: ", last_item_in_column.get_class())
 		
+		card_ui.z_index = 0
+		
 		if last_item_in_column.get_class() == "Control": # TODO: tähän joku luotettavampi check
 			if last_item_in_column.is_hidden:
 				print("INVALID: hidden card")
-				card_ui.z_index = 0
 				return
 			elif card_ui.card.colour == last_item_in_column.card.colour:
 				print("INVALID: same colour")
-				card_ui.z_index = 0
 				return
 			elif card_ui.card.number + 1 != last_item_in_column.card.number:
 				print("INVALID: wrong number")
-				card_ui.z_index = 0
 				return
 			#print("played ", card_ui.card.id, " on ", last_item_in_column.card.id)
 		
 		is_played = true
-		card_ui.z_index = 0
 		
 		#print("play card for target(s)", card_ui.targets)
 		#TODO: pura tämäkin hökötys
