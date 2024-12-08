@@ -48,6 +48,9 @@ func enter() -> void:
 			for child in card_ui.child_column.get_children():
 				child.reparent(new_parent)
 				child.texture.modulate = Color.WHITE
+			#TODO: tässä hajoaa joku
+			card_ui.child_column.queue_free()
+			card_ui.child_column = null
 			#print("this card has the following children: ", card_ui.child_column.get_children())
 
 
