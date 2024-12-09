@@ -14,7 +14,7 @@ signal reparent_requested(which_card_ui: CardUI)
 @onready var targets: Array[Node] = []
 @onready var current_parent: BoxContainer
 @onready var is_hidden: bool = true
-@onready var child_column: VBoxContainer
+@onready var child_column: VBoxContainer = null
 
 
 func _ready() -> void:
